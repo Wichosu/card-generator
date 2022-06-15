@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <Card 
-        img='no image'
-        title='Hola React'
-        description='Aprendiendo React'/>
+        img={'pic'}
+        title={'Hola React'}
+        description={'Aprendiendo React'}/>
     </div>
   );
 }
