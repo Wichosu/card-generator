@@ -7,8 +7,8 @@ function Card({ img, title, description}){
       <img src={require(`../imgs/${img}.jpeg`)}
            alt='' 
            className='card-image'/>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h1 className='card-title'>{title}</h1>
+      <p className='card-text'>{description}</p>
     </div>
   );
 }
