@@ -20,6 +20,7 @@ label{
 
 button{
   width: 100px;
+  padding: 2px 0;
   margin: 20px 50%;
   transform: translateX(-50%);
   background-color: #57d8fb;
@@ -27,6 +28,21 @@ button{
   border-radius: 5px;
   box-shadow: 0px 2px 2px black;
   cursor: pointer;
+  transition: ease 500ms;
+}
+
+button:hover, .form-file-label:hover{
+  transform: translateY(-5px) translateX(-50%);
+  transition: ease 500ms;
+  background-color: #ffd000;
+  border-color: #ffd000;
+  box-shadow: 0px 6px 4px black;
+}
+
+button:active, .form-file-label:active{
+  transform: translateY(5px) translateX(-50%);
+  transform: linear 1ms;
+  box-shadow: 0px -1px 2px black;
 }
 
 .form-file{
@@ -40,10 +56,12 @@ button{
 .form-file-label{
   width: fit-content;
   margin: 30px 50%;
+  padding: 1px 5px;
   transform: translateX(-50%);
   border: 5px solid #9ae9ff;
   border-radius: 5px;
   background-color: #9ae9ff;
   box-shadow: 0px 2px 2px black;
   cursor: pointer;
+  transition: ease 400ms;
 }
