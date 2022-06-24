@@ -1,9 +1,16 @@
 import React, {useState} from 'react'
 import '../styles/FormCard.css';
+import {v4 as uuidv4} from 'uuid';
 
 function FormCard(){
-
+  //hooks
   const [selectedImage, setSelectedImage] = useState();
+  const [title, setTitle] = useState();
+  const [description, setDescription] = useState();
+
+  const changeTitle = (e) => {
+    setTitle(e.target.value)
+  }
 
   const imageChange = (e) => {
     if(e.target.files && e.target.files.length > 0){
