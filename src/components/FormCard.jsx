@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import '../styles/FormCard.css';
 import {v4 as uuidv4} from 'uuid';
 
-function FormCard(){
+function FormCard(props){
   //hooks
   const [selectedImage, setSelectedImage] = useState();
   const [title, setTitle] = useState();
@@ -12,14 +12,31 @@ function FormCard(){
     setTitle(e.target.value)
   }
 
+  const changeDescription = (e) => {
+    setDescription(e.target.value)
+  }
+
   const imageChange = (e) => {
     if(e.target.files && e.target.files.length > 0){
       setSelectedImage(e.target.files[0]);
     }
   }
 
+  const sendForm = (e) => {
+    e.preventDefault();
+
+    const newCard = {
+      id: uuidv4(),
+      image: selectedImage,
+      title: title,
+      description: description
+    }
+
+    props.onSubmit(newCard);
+  }
+
   return(
-    <form className='form-container'>
+    <form className='form-container' onSubmit={sendForm}>
       <label htmlFor='image_upload' className='form-file-label'>img...</label>
       <input 
         type='file' 
@@ -38,9 +55,9 @@ function FormCard(){
         </div>
       )}
       <label>Title</label>
-      <input type='text' />
+      <input type='text' onClick={changeTitle} />
       <label>Text</label>
-      <textarea name='textarea' rows={10} cols={40} />
+      <textarea name='textarea' rows={10} cols={40} onClick={changeDescription} />
       <button>Create</button>
     </form>
   );
