@@ -1,10 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Card from './Card'
+import FormCard from './FormCard';
 
 function CardContainer() {
-    return(
-        <div>
-            <Card />
-        </div>
-    );
+    
+  const [cards, setCards] = useState([]);
+  
+  const addCard;
+
+  return(
+    <>
+      <FormCard OnSubmit={} />
+    </>
+  );
 }
