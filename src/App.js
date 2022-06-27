@@ -1,18 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card';
 import FormCard from './components/FormCard';
+import CardContainer from './components/CardContainer';
 
 function App() {
   return (
     <div className='App'>
-      <Card 
-        img={'pic'}
-        title={'Hola React'}
-        description={'Aprendiendo React'}/>
-      
-      <FormCard />
+      <CardContainer />
     </div>
   );
 }

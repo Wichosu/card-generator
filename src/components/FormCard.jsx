@@ -49,15 +49,15 @@ function FormCard(props){
         <div className='form-image-container'>
           <img
             src={URL.createObjectURL(selectedImage)}
-            alt="Your image"
+            alt=""
             className='form-image'
           />
         </div>
       )}
       <label>Title</label>
-      <input type='text' onClick={changeTitle} />
+      <input type='text' onChange={changeTitle} />
       <label>Text</label>
-      <textarea name='textarea' rows={10} cols={40} onClick={changeDescription} />
+      <textarea name='textarea' rows={10} cols={40} onChange={changeDescription} />
       <button>Create</button>
     </form>
   );
