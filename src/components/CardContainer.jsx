@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Card from './Card'
 import FormCard from './FormCard';
+import '../styles/CardContainer.css';
 
 function CardContainer() {
     
@@ -13,8 +14,8 @@ function CardContainer() {
   }
 
   return(
-    <>
-      <FormCard onSubmit={addCard} />
+    <div className='container'>
+      <FormCard onSubmit={addCard} className='form'/>
       <div className='cards-container'>
         {
           cards.map((card) => 
@@ -28,7 +29,7 @@ function CardContainer() {
           )
         }
       </div>
-    </>
+    </div>
   );
 }
 
