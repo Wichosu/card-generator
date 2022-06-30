@@ -22,7 +22,7 @@ function CardContainer() {
             <Card 
               key={card.id}
               id={card.id}
-              img={'pic'}
+              img={card.image}
               title={card.title}
               description={card.description}
             />

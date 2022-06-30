@@ -4,7 +4,7 @@ import '../styles/Card.css';
 function Card({ img, title, description}){
   return(
     <div className='card-container'>
-      <img src={require(`../imgs/${img}.jpeg`)}
+      <img src={URL.createObjectURL(img)}
            alt='' 
            className='card-image'/>
       <h1 className='card-title'>{title}</h1>
