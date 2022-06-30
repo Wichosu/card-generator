@@ -2,5 +2,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+}
+
+@media (max-width: 800px){
+    .cards-container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }

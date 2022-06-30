@@ -25,6 +25,7 @@ function CardContainer() {
               img={card.image}
               title={card.title}
               description={card.description}
+              hasImg={card.hasImg}
             />
           )
         }

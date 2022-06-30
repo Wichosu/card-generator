@@ -7,6 +7,7 @@ function FormCard(props){
   const [selectedImage, setSelectedImage] = useState();
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
+  const [hasImg, setHasImg] = useState(false);
 
   const changeTitle = (e) => {
     setTitle(e.target.value)
@@ -19,6 +20,7 @@ function FormCard(props){
   const imageChange = (e) => {
     if(e.target.files && e.target.files.length > 0){
       setSelectedImage(e.target.files[0]);
+      setHasImg(true)
     }
   }
 
@@ -29,7 +31,8 @@ function FormCard(props){
       id: uuidv4(),
       image: selectedImage,
       title: title,
-      description: description
+      description: description,
+      hasImg: hasImg
     }
 
     props.onSubmit(newCard);
