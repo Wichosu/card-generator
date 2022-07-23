@@ -58,9 +58,17 @@ function FormCard(props){
         </div>
       )}
       <label>Title</label>
-      <input type='text' onChange={changeTitle} />
+      <input 
+        type='text'
+        maxLength={50}
+        onChange={changeTitle} />
       <label>Text</label>
-      <textarea name='textarea' rows={10} cols={40} onChange={changeDescription} />
+      <textarea
+        name='textarea'
+        rows={10} 
+        cols={40}
+        maxLength={200} 
+        onChange={changeDescription} />
       <button>Create</button>
     </form>
   );
