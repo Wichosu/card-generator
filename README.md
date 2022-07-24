@@ -8,4 +8,6 @@ Checked it out at https://wichosu.github.io/card-generator/
 
 ## Screenshots
 
-Missing screenshots
+![Form like, button for image, input for title, textbox for description](./screenshots/screen.jpg)
+
+![Same form and below three cards generated](./screenshots/screen2.jpg)
