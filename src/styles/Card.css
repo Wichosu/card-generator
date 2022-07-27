@@ -1,6 +1,6 @@
 .card-container{
-  margin: 10px;
-  max-width: 400px;
+  margin-top: 2em;
+  max-width: 300px;
   text-align: center;
   word-wrap: break-word;
   overflow: hidden;
@@ -10,20 +10,16 @@
 }
 
 .card-image{
+  margin: 0;
   width: 100%;
-  height: 100%;
-}
-
-.card-image:hover{
-  filter: blur(5px);
 }
 
 .card-title{
-  display: none;
+  padding: 0.4em 0;
+  font-weight: 500;
 }
 
 .card-text{
-  display: none; 
-  font-weight: 100; 
+  font-weight: 300;
   text-align: left;
 }
