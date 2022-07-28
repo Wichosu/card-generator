@@ -2,7 +2,7 @@
   width: max-content;
   margin: 60px 50% 0px 50%;
   transform: translateX(-50%);
-  border: 1px solid black;
+  box-shadow: 0px 0px 4px black;
   border-radius: 5px;
   display: grid;
   text-align: center;
@@ -29,15 +29,11 @@
   transition: ease 400ms;
 }
 
-.form-image-container{
-  width: 100px;
-  margin: 0px 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-}
-
 .form-image{
-  width: inherit;
+  width: 10em;
+  margin: 1em 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 2px 4px black;
 }
 
 input, textarea{

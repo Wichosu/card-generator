@@ -39,7 +39,7 @@ function FormCard(props){
   }
 
   return(
-    <form className='form-container' onSubmit={sendForm}>
+    <form onSubmit={sendForm} className='form-container'>
       <label htmlFor='image_upload' className='form-file-label'>img...</label>
       <input 
         type='file' 
@@ -47,29 +47,34 @@ function FormCard(props){
         id='image_upload'
         accept='.jpg, .jpeg, .png'
         className='form-file'
-        onChange={imageChange} />
+        onChange={imageChange} 
+        required />
       {selectedImage && (
-        <div className='form-image-container'>
-          <img
-            src={URL.createObjectURL(selectedImage)}
-            alt=""
-            className='form-image'
-          />
-        </div>
+        <img
+          src={URL.createObjectURL(selectedImage)}
+          alt=""
+          className='form-image'
+        />
       )}
-      <label>Title</label>
+      <label htmlFor='title' className='form-text form-title'>Title</label>
       <input 
         type='text'
-        maxLength={50}
-        onChange={changeTitle} />
-      <label>Text</label>
+        name='title'
+        id='title'
+        maxLength={40}
+        onChange={changeTitle} 
+        className='form-text'
+        required />
+      <label className='form-text'>Text</label>
       <textarea
         name='textarea'
-        rows={10} 
+        rows={5} 
         cols={40}
-        maxLength={200} 
-        onChange={changeDescription} />
-      <button>Create</button>
+        maxLength={160} 
+        onChange={changeDescription}
+        className='form-text'
+        required />
+      <button className='form-text' >Create</button>
     </form>
   );
 }
