@@ -24,6 +24,12 @@ function FormCard(props){
     }
   }
 
+  const verifyImg = () => {
+    if(!hasImg){
+      alert('missing image, please selected one')
+    }
+  }
+
   const sendForm = (e) => {
     e.preventDefault();
 
@@ -74,7 +80,7 @@ function FormCard(props){
         onChange={changeDescription}
         className='form-text'
         required />
-      <button className='form-text' >Create</button>
+      <button className='form-text' onClick={verifyImg}>Create</button>
     </form>
   );
 }
