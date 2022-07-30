@@ -36,4 +36,11 @@
   margin: 0.5rem 0.5rem 0 0;
   color: rgb(127, 127, 127);
   cursor: pointer;
+  transition: ease 0.2s;
+}
+
+.card-destroyer:hover{
+  background-color: rgba(253, 150, 150, 0.829);
+  color: black;
+  border-radius: 100%;
 }
