@@ -1,5 +1,6 @@
 .card-container{
-  margin-top: 2em;
+  display: grid;
+  margin-top: 2rem;
   max-width: 300px;
   text-align: center;
   word-wrap: break-word;
@@ -10,12 +11,15 @@
 }
 
 .card-image{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
   margin: 0;
   width: 100%;
 }
 
 .card-title{
-  padding: 0.4em 0;
+  padding: 0.4rem 0;
   font-weight: 500;
 }
 
@@ -25,6 +29,11 @@
 }
 
 .card-destroyer{
-  z-index: 1;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+  justify-self: flex-end;
+  margin: 0.5rem 0.5rem 0 0;
+  color: rgb(127, 127, 127);
   cursor: pointer;
 }
