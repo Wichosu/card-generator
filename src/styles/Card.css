@@ -23,3 +23,8 @@
   font-weight: 300;
   text-align: left;
 }
+
+.card-destroyer{
+  z-index: 1;
+  cursor: pointer;
+}

@@ -13,6 +13,11 @@ function CardContainer() {
     setCards(updateCards)
   }
 
+  const deleteCard = (id) => {
+    const updateCards = cards.filter(card => card.id !== id)
+    setCards(updateCards)
+  }
+
   return(
     <div className='container'>
       <FormCard onSubmit={addCard} className='form'/>
@@ -26,6 +31,7 @@ function CardContainer() {
               title={card.title}
               description={card.description}
               hasImg={card.hasImg}
+              deleteCard={deleteCard}
             />
           )
         }
