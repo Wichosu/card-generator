@@ -80,7 +80,7 @@ function FormCard(props){
         onChange={changeDescription}
         className='form-text'
         required />
-      <button className='form-text' onClick={verifyImg}>Create</button>
+      <button className='form-text' onClick={verifyImg}>CREATE</button>
     </form>
   );
 }

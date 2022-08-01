@@ -1,8 +1,8 @@
 .form-container{
   width: max-content;
-  margin: 60px 50% 0px 50%;
+  margin: 2rem 50% 0 50%;
   transform: translateX(-50%);
-  box-shadow: 0px 0px 4px black;
+  box-shadow: 0 0 4px black;
   border-radius: 5px;
   display: grid;
   text-align: center;
@@ -18,27 +18,26 @@
 
 .form-file-label{
   width: fit-content;
-  margin: 10px 50%;
-  padding: 1px 5px;
+  margin: 1rem 50%;
+  padding: 0.4rem 0.6rem;
   transform: translateX(-50%);
-  border: 5px solid #9ae9ff;
   border-radius: 5px;
-  background-color: #9ae9ff;
-  box-shadow: 0px 2px 2px black;
+  background-color: #5786FB;
+  box-shadow: 0 2px 2px black;
   cursor: pointer;
   transition: ease 400ms;
 }
 
 .form-image{
   width: 10em;
-  margin: 1em 50%;
+  margin: 1rem 50%;
   transform: translateX(-50%);
-  box-shadow: 0px 2px 4px black;
+  box-shadow: 0 2px 4px black;
 }
 
 input, textarea{
   width: 80%;
-  margin: 10px 50%;
+  margin: 1rem 50%;
   transform: translateX(-50%);
 }
 
@@ -48,14 +47,15 @@ label{
 }
 
 button{
-  width: 100px;
-  padding: 2px 0;
+  width: fit-content;
+  padding: 0.4rem 0.6rem;
   margin: 0px 50% 10px 50%;
   transform: translateX(-50%);
-  background-color: #57d8fb;
-  border: 1px solid #57d8fb;
+  background-color: #5786FB;
+  border: none;
   border-radius: 5px;
   box-shadow: 0px 2px 2px black;
+  font-weight: 500;
   cursor: pointer;
   transition: ease 500ms;
 }
@@ -63,8 +63,7 @@ button{
 button:hover, .form-file-label:hover{
   transform: translateY(-5px) translateX(-50%);
   transition: ease 500ms;
-  background-color: #ffd000;
-  border-color: #ffd000;
+  animation: multicolor 2s linear 0s infinite alternate;
   box-shadow: 0px 6px 4px black;
 }
 
@@ -74,3 +73,14 @@ button:active, .form-file-label:active{
   box-shadow: 0px -1px 2px black;
 }
 
+@keyframes multicolor {
+  0%{
+    background-color: #5786FB;
+  }
+  50%{
+    background-color: #57D8FB;
+  }
+  100%{
+    background-color: #57FBCC;
+  }
+}
