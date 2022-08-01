@@ -62,8 +62,8 @@ function FormCard(props){
           className='form-image'
         />
       )}
-      <label htmlFor='title' className='form-text form-title'>Title</label>
       <input 
+        placeholder='title...'
         type='text'
         name='title'
         id='title'
@@ -71,8 +71,8 @@ function FormCard(props){
         onChange={changeTitle} 
         className='form-text'
         required />
-      <label className='form-text'>Text</label>
       <textarea
+        placeholder='text...'
         name='textarea'
         rows={5} 
         cols={40}

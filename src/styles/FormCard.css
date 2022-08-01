@@ -26,6 +26,8 @@
   box-shadow: 0 2px 2px black;
   cursor: pointer;
   transition: ease 400ms;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .form-image{
@@ -39,11 +41,6 @@ input, textarea{
   width: 80%;
   margin: 1rem 50%;
   transform: translateX(-50%);
-}
-
-label{
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 button{
