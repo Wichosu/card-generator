@@ -28,7 +28,7 @@
   text-align: left;
 }
 
-.card-destroyer{
+.card-destroyer, .card-edit{
   grid-column: 1;
   grid-row: 1;
   z-index: 2;
@@ -40,7 +40,18 @@
 }
 
 .card-destroyer:hover{
-  background-color: rgba(253, 150, 150, 0.829);
+  background-color: #ff8282d3;
+  color: black;
+  border-radius: 100%;
+}
+
+.card-edit{
+  justify-self: flex-start;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.card-edit:hover{
+  background-color: #82ffff;
   color: black;
   border-radius: 100%;
 }

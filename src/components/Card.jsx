@@ -16,10 +16,19 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
   return(
     <div className='card-container'>
       {
-        edit? <MdOutlineEdit onClick={editMode}/> : <MdOutlineEditOff onClick={editMode}/>
+        edit? <MdOutlineEdit
+                onClick={editMode} 
+                className='card-edit' />
+              : 
+              <MdOutlineEditOff 
+                onClick={editMode}
+                className='card-edit' />
       }
-      <AiOutlineCloseCircle onClick={() => deleteCard(id)} className='card-destroyer'/>
-      <img src={hasImg? URL.createObjectURL(img) : ''}
+      <AiOutlineCloseCircle
+        onClick={() => deleteCard(id)} 
+        className='card-destroyer' />
+      <img
+        src={hasImg? URL.createObjectURL(img) : ''}
         alt='' 
         className='card-image' />
       <h1 className='card-title'>{title}</h1>
