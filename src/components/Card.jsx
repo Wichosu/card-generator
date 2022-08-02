@@ -10,6 +10,7 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
   const [edit, setEdit] = useState(false)
   const [header, setHead] = useState(title)
   const [paragraph, setParagraph] = useState(description)
+  const [image, setImage] = useState(img)
   
   const editMode = () => {
     setEdit(!edit)
@@ -23,6 +24,10 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
     setParagraph(e.target.value)
   }
 
+  const editImage = (e) => {
+    setImage(e.target.files[0])
+  }
+
   return(
     <div className='card-container'>
       {
@@ -34,10 +39,17 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
                 onClick={editMode}
                 className='card-edit' />
       }
-      <img
-        src={hasImg? URL.createObjectURL(img) : ''}
-        alt='' 
-        className='card-image' />
+      {
+        edit? <input
+                type='file'
+                accept='.jpg, .jpeg, .png'
+                onChange={editImage} />
+              :
+              <img
+                src={URL.createObjectURL(image)}
+                alt='' 
+                className='card-image' />
+      }
       {
         edit? <input 
                 type='text'
