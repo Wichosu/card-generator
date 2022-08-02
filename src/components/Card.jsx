@@ -9,6 +9,7 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
 
   const [edit, setEdit] = useState(false)
   const [header, setHead] = useState(title)
+  const [paragraph, setParagraph] = useState(description)
   
   const editMode = () => {
     setEdit(!edit)
@@ -16,6 +17,10 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
 
   const editHeader = (e) => {
     setHead(e.target.value)
+  }
+
+  const editParagraph = (e) => {
+    setParagraph(e.target.value)
   }
 
   return(
@@ -37,15 +42,23 @@ function Card({ img, title, description, hasImg, id, deleteCard}){
         edit? <input 
                 type='text'
                 placeholder={header} 
-                onChange={editHeader}/>
+                onChange={editHeader} />
               :
               <h1 
                 onClick={edit? editHeader : ''}
                 className='card-title'>{header}
               </h1>
       }
-      
-      <p className='card-text'>{description}</p>
+      {
+        edit? <input
+                type='text'
+                placeholder={paragraph}
+                onChange={editParagraph} />
+              :
+              <p 
+                className='card-text'>{paragraph}
+              </p>
+      }
       <AiOutlineCloseCircle
         onClick={() => deleteCard(id)} 
         className='card-destroyer' />
