@@ -40,7 +40,10 @@ function FormCard(props){
       description: description,
       hasImg: hasImg
     }
-
+    setSelectedImage()
+    setHasImg()
+    setDescription('')
+    setTitle('')
     props.onSubmit(newCard);
   }
 
@@ -69,6 +72,7 @@ function FormCard(props){
         id='title'
         maxLength={40}
         onChange={changeTitle} 
+        value={title}
         className='form-text'
         required />
       <textarea
@@ -78,6 +82,7 @@ function FormCard(props){
         cols={40}
         maxLength={160} 
         onChange={changeDescription}
+        value={description}
         className='form-text'
         required />
       <button className='form-text' onClick={verifyImg}>CREATE</button>
