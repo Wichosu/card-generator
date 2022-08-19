@@ -4,6 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const indexRouter = require('../routes/index');
+
 //Create express application object
 const app = express();
 
@@ -25,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'src')));
 
 
-app.use('/');
+app.use('/', indexRouter);
 
 //Catch 404 and foward error handler
 app.use((req, res, next) => {

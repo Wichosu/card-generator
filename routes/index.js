@@ -4,4 +4,6 @@ const router = express.Router();
 const cardController = require('../controllers/cardController');
 
 /*Get Home page */
-router('/', cardController.index);
+router.get('/', cardController.index);
+
+module.exports = router;
